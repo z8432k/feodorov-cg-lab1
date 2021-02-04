@@ -28,6 +28,3 @@ find_package(GLUT REQUIRED)
 
 add_executable(lab1 lab1.cc)
 target_link_libraries(lab1 PUBLIC ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
-
-
-add_subdirectory(src)

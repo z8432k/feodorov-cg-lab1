@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include <GL/glut.h>
 #define _USE_MATH_DEFINES
 #include <cmath>
@@ -9,12 +7,7 @@ using namespace std;
 static double angle = .0;
 
 static void idle_cb() {
-    // BUG:  There is poossible double overflow
     angle += 0.01;
-
-    // cameraHeight = 1.0;
-    // Перерисовка
-
     glutPostRedisplay();
 }
 
@@ -81,9 +74,6 @@ static void reshape(int newWidth, int newHeight) {
     glViewport(0, 0, newWidth, newHeight);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-
-    // windowWidth = newWidth;
-    // windowHeight = newHeight;
 
     double minZPlane = 0.01;
     double maxZPlane = 100.0;
